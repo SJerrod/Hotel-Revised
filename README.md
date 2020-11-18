@@ -19,7 +19,10 @@
 
 | Behavior                                                        | Input     | Output    |
 | --------------------------------------------------------------- | --------- | --------- |
-| | | |
+| Calendar api| | |
+| tracking api | | |
+| weather api| | |
+| travel api | | |
 
 
 ## Bugs
