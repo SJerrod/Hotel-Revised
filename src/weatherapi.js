@@ -1,11 +1,7 @@
-export default class WeatherTracker {
+export default class WeatherTracker {  
   static async getWeather() {
     try {
-      const response = await fetch(`https://api.stormglass.io/v2/weather/point?lat=32.99&lng=26.99&params=waterTemperature,airTemperature,windSpeed`, {
-        headers: {
-          'Authorization': `${process.env.API_KEY}`
-        }
-      })
+      const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=-90.00&lon=45.00&appid=${process.env.API_KEY}`);
       if (!response.ok) {
         throw Error(response.statusText);
       }
@@ -15,16 +11,3 @@ export default class WeatherTracker {
     }
   }
 }
-
-// From website 
-// const lat = 58.7984;
-// const lng = 17.8081;
-// const params = 'windSpeed';
-
-// fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`, {
-//   headers: {
-//     'Authorization': 'example-api-key'
-//   }
-// }).then((response) => response.json()).then((jsonData) => {
-//   // Do something with response data.
-// });
